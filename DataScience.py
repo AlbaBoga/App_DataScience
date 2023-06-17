@@ -18,7 +18,7 @@ st.set_option('deprecation.showPyplotGlobalUse', False)
 data = pd.read_csv("data/ds_salaries.csv")
 
 image2 = Image.open('img/ds.jpg')
-st.image(image2, width=500)
+st.image(image2, width=700)
 
 st.title('Empleos del sector Data Science en 2023')
 st.markdown("""
