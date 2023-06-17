@@ -15,7 +15,7 @@ from PIL import Image
 st.set_page_config(page_title='Primer Vistazo', page_icon='📋', layout='centered')
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
-data = pd.read_csv("data\ds_salaries.csv")
+data = pd.read_csv("data/ds_salaries.csv")
 
 st.title('Conjunto de Datos')
 

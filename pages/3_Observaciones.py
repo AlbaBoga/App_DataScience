@@ -15,7 +15,7 @@ from PIL import Image
 st.set_page_config(page_title='Observaciones', page_icon='📋', layout='centered')
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
-df = pd.read_csv("data\preprocesado.csv")
+df = pd.read_csv("data/preprocesado.csv")
 
 st.title('Observaciones')
 
