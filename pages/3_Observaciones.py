@@ -12,7 +12,7 @@ import streamlit as st
 from PIL import Image
 #--------------LIBRERÍAS--------------#
 
-st.set_page_config(page_title='Observaciones', page_icon='📋', layout='centered')
+st.set_page_config(page_title='Observaciones', page_icon='📋', layout='wide')
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
 df = pd.read_csv("data/preprocesado.csv")
@@ -174,12 +174,12 @@ with tab2:
         b0=y_mean-(x_mean*b1)
         y=b0+(b1*2024)
 
-        st.write(f'Para 2024, se estima que el salario medio alcance {round(y,2)} dólares')
+        #st.write(f'Para 2024, se estima que el salario medio alcance {round(y,2)} dólares')
 
         pct_salary=((y*100)/data.loc[3,'salary_in_usd'])-100
         pct_salary2=((data.loc[2,'salary_in_usd']*100)/data.loc[3,'salary_in_usd'])-((data.loc[1,'salary_in_usd']*100)/data.loc[3,'salary_in_usd'])
 
-        st.write(f'Esto supondría un crecimiento del {round(pct_salary,2)}% frente al {round(pct_salary2,2)}% que hubo de 2021 a 2022.')
+        #st.write(f'Esto supondría un crecimiento del {round(pct_salary,2)}% frente al {round(pct_salary2,2)}% que hubo de 2021 a 2022.')
 
     with col2:
         fig = go.Figure()
@@ -287,12 +287,12 @@ print(f'Esto supondría un decrecimiento del {round(abs(pct_remote),2)}% frente 
         b0=y_mean-(x_mean*b1)
         y=b0+(b1*2024)
 
-        st.write(f'Para 2024, se estima que el ratio de trabajo remoto alcance {round(y,2)}%')
+        #st.write(f'Para 2024, se estima que el ratio de trabajo remoto alcance {round(y,2)}%')
 
         pct_remote=((y*100)/data.loc[3,'remote_ratio'])-100
         pct_remote2=((data.loc[2,'remote_ratio']*100)/data.loc[3,'remote_ratio'])-((data.loc[1,'remote_ratio']*100)/data.loc[3,'remote_ratio'])
 
-        st.write(f'Esto supondría un decrecimiento del {round(abs(pct_remote),2)}% frente al {round(abs(pct_remote2),2)}% que hubo de 2021 a 2022.')
+        #st.write(f'Esto supondría un decrecimiento del {round(abs(pct_remote),2)}% frente al {round(abs(pct_remote2),2)}% que hubo de 2021 a 2022.')
 
     with col2:
         fig = go.Figure()

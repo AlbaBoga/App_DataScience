@@ -18,7 +18,7 @@ st.set_option('deprecation.showPyplotGlobalUse', False)
 data = pd.read_csv("data/ds_salaries.csv")
 
 image2 = Image.open('img/ds.jpg')
-st.image(image2, width=250)
+st.image(image2, width=500)
 
 st.title('Empleos del sector Data Science en 2023')
 st.markdown("""
@@ -26,6 +26,8 @@ Este conjunto de datos es útil para entender la distribución de los salarios e
 
 ### VARIABLES
 
+""")
+table="""
 <table>
   <tr>
     <th>Nombre de la columna</th>
@@ -76,7 +78,10 @@ Este conjunto de datos es útil para entender la distribución de los salarios e
     <td>El número mediano de personas que trabajaron para la empresa durante el año.</td>
   </tr>
 </table>
+"""
+st.markdown(table, unsafe_allow_html=True)
 
+st.markdown("""
 ### Objetivos
 
 El objetivo principal de este ejercicio es aprender y aplicar técnicas de análisis y visualización de datos utilizando las bibliotecas de Python Matplotlib, Seaborn y Plotly. 
